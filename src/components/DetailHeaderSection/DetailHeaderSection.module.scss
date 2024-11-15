@@ -1,0 +1,67 @@
+.mainContainer {
+  width: 100%;
+  height: 80vh; /* Ensure the container takes full height */
+  background: url("hhttps://i.pinimg.com/564x/23/63/2c/23632cefe4462ffac5c35fcefc59e317.jpg")
+    no-repeat center center;
+  background-size: cover;
+  animation: slideBackground 30s infinite ease-in-out;
+  margin-bottom: 40px;
+}
+
+/* Keyframes for sliding background */
+@keyframes slideBackground {
+  0% {
+    background-image: url("https://i.pinimg.com/564x/0c/94/1f/0c941ffbc0b4e008eb67f837520ed1b8.jpg");
+    background-position: 0% 50%;
+  }
+  25% {
+    background-image: url("https://i.pinimg.com/564x/ef/0f/63/ef0f63a7ba1be35810d4603dd802dfb9.jpg");
+    background-position: 100% 50%;
+  }
+  50% {
+    background-image: url("https://i.pinimg.com/564x/7c/a8/4d/7ca84ddae12cd9bff441d4e8794c75c3.jpg");
+    background-position: 0% 50%;
+  }
+  75% {
+    background-image: url("https://i.pinimg.com/564x/27/a9/42/27a942f2fa17f50134d9421866f13dc4.jpg");
+    background-position: 100% 50%;
+  }
+  100% {
+    background-image: url("https://i.pinimg.com/564x/e7/12/51/e7125126cbc12b4e5a842013a20fef8c.jpg");
+    background-position: 0% 50%;
+  }
+}
+
+.heading {
+  color: #fff;
+  font-family: Inter;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0; /* Remove padding if you want automatic centering */
+  margin: 0;
+
+  /* Center the heading horizontally */
+  text-align: left;
+
+  /* Use flexbox for vertical centering if required */
+  display: flex;
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  height: 100vh; /* Ensure the element has enough height for vertical centering */
+}
+
+@media (max-width: 992px) {
+  .mainContainer {
+    height: 29vh;
+  }
+  .heading {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 108px;
+    font-size: 28px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

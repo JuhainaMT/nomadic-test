@@ -1,0 +1,58 @@
+.container {
+  margin: 0 17%;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 48px;
+}
+
+.heading {
+  margin-bottom: 37px;
+  margin-top: 48px;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.itinerary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  border-radius: 8px;
+  border: 1px solid #ffc107;
+  padding: 16px 16px 66px 23px;
+  box-shadow: 1.5px 1.5px #ffc107;
+  text-align: left;
+  background-color: white;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .itinerary {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card p {
+    font-size: 12px;
+  }
+  .card {
+    padding: 16px 16px 16px 23px;
+  }
+  .card h3 {
+    font-size: 15px;
+  }
+}

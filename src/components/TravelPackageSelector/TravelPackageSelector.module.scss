@@ -1,0 +1,260 @@
+.travelPackageSelector {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 24px 25px;
+
+  background-color: #fff;
+}
+
+.header h2 {
+  color: #000;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.header p {
+  color: #b6b1b1;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 32px;
+}
+
+.dateTravelersSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 27px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: 1px solid #d9d9d9;
+
+  background: #fff;
+}
+
+.datePicker,
+.travelersPicker {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+
+  // Media query for screens below 370px
+  @media (max-width: 370px) {
+    font-size: 13px;
+  }
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.packagesSection h3 {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-top: 20px;
+  border-top: 1px solid #d9d9d9;
+  padding-bottom: 20px;
+}
+
+.package {
+  border-radius: 30px;
+  border: 2px solid #d9d9d9;
+  padding: 15px 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: border-color 0.3s, padding 0.3s;
+  box-sizing: border-box;
+}
+
+.package.selected {
+  margin-bottom: 12px;
+  border: 2px solid #ffc108;
+  border-radius: 30px;
+  padding: 15px 25px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.3s, padding 0.3s;
+  box-sizing: border-box;
+}
+
+.packageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.radioButton {
+  margin-right: 8px;
+}
+
+.bookNowButton {
+  background-color: #ffc108;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.bookNowButton:hover {
+  background-color: #e6a800;
+}
+.selectText {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.travelersInput {
+  border: none;
+  background: none;
+}
+
+.travelPackageOneDetails {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 34px;
+}
+.adultPricingDetails {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 4px;
+}
+.totalPrice {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 4px;
+}
+.priceIncludesFee {
+  color: #b6b1b1;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.radioButton {
+  width: 24px; // Adjust size as needed
+  height: 24px; // Adjust size as needed
+  border-radius: 50%; // Make it a circle
+  border: 2px solid transparent; // Set default border to transparent
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border 0.3s, background-color 0.3s;
+
+  &.selectedCircle {
+    background-color: #e6a800; // Yellow fill for selected package
+    border: 2px solid #e6a800; // Border color when selected
+  }
+
+  &.defaultCircle {
+    background-color: white; // White fill for unselected package
+    border: 2px solid gray; // Optional border color for unselected packages
+  }
+}
+.customRadioButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  /* Hide the native radio input */
+  .radioButtonInput {
+    display: none;
+  }
+
+  /* Circle for the custom radio button */
+  .radioButtonCircle {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    border-radius: 50%;
+    border: 2px solid #d9d9d9;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-right: 8px;
+    box-sizing: border-box;
+
+    /* Change background and border color when selected */
+    .radioButtonInput:checked + & {
+      background-color: #ffc108;
+      border-color: #ffc108;
+    }
+  }
+}
+.datePickerMob {
+  display: none;
+}
+@media (max-width: 992px) {
+  .datePicker {
+    display: none;
+  }
+  .dateTravelersSection {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .header h2 {
+    font-size: 16px;
+  }
+  .packageHeader {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .travelPackageOneDetails {
+    font-size: 12px;
+    margin-bottom: 27px;
+  }
+  .adultPricingDetails {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .datePickerMob {
+    display: block;
+  }
+}
+@media (max-width: 370) {
+  .travelersInput {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1110px) and (min-width: 990px) {
+  .datePicker {
+    width: 80%;
+  }
+}

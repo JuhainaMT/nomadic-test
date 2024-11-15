@@ -1,0 +1,157 @@
+.footer {
+  background: url("https://i.pinimg.com/564x/2e/9d/dc/2e9ddc3f83b5571e71579f315b6208a4.jpg");
+  background-size: cover;
+  padding: 107px 17%;
+  color: white;
+  font-family: Arial, sans-serif;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 63px;
+    @media (max-width: 992px) {
+      padding-left: 30px;
+    }
+    & > div {
+      flex: 1;
+      margin-right: 20px;
+      gap: 63px;
+      @media (max-width: 992px) {
+        flex-direction: column;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .newLetter {
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .left {
+    max-width: 300px;
+
+    .logo {
+      margin-bottom: 17px;
+
+      .tribe {
+        color: #ffc107; /* Custom color for the word 'Tribe' */
+      }
+    }
+
+    .description {
+      color: #fff;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      padding-bottom: 17px;
+    }
+
+    .contact {
+      font-size: 14px;
+
+      p {
+        margin: 5px 0;
+        display: flex;
+        gap: 4px;
+      }
+    }
+  }
+
+  .middle {
+    display: flex;
+
+    .company,
+    .explore {
+      h4 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 12px;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+
+  .right {
+    .newsletter {
+      display: flex;
+      flex-direction: column;
+
+      .emailInput {
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        padding: 26px 18px;
+        margin-bottom: 10px;
+        border-radius: 11px;
+
+        color: white;
+        font-size: 14px;
+        outline: none;
+        ::placeholder {
+          color: white;
+        }
+      }
+
+      .subscribeButton {
+        background: rgba(255, 255, 255, 0.3);
+        padding: 19px 142px;
+        font-size: 14px;
+        font-weight: bold;
+        color: black;
+        border-radius: 11px;
+        border: 0.4px solid #ffc108;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background-color: #e6ac00;
+        }
+        @media (max-width: 992px) {
+          padding: 14px 0px;
+          width: 100%;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .subscribeButton {
+    padding: 19px 0px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .footer {
+    padding: 107px 20px;
+  }
+  .contact {
+    justify-content: center;
+  }
+}
+@media (max-width: 1158px) and (min-width: 990px) {
+  .container {
+    flex-direction: column;
+  }
+}

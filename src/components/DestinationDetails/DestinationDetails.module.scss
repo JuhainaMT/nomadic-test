@@ -1,0 +1,368 @@
+.title,
+.seeMoreTitle {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+  margin-left: 17%;
+  margin-bottom: 13px;
+}
+.seeMoreTitle {
+  margin-top: 61px;
+}
+.price {
+  color: #ffc107;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  padding-left: 11px;
+}
+.perPersonText {
+  color: #b6b1b1;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.hotDestination {
+  padding: 20px;
+  text-align: center;
+}
+
+.region {
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  margin-top: -60px;
+  margin-bottom: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 9px 20px;
+  width: max-content;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.region::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2f2c2c;
+  border-radius: 8px;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+.destinationGrid .destinationGridDetails {
+  display: flex;
+  // grid-template-columns: repeat(4, minmax(180px, 1fr));
+  overflow-x: scroll;
+  // gap: 20px;
+  margin-left: 17%;
+  margin-right: 17%;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.card {
+  position: relative;
+  border-radius: 10px 10px 10px 10px;
+  border-radius: 8px;
+  border: 1px solid #c2c2c2;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
+  padding-bottom: 10px;
+  // overflow: hidden;
+  // width: 300px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1), 0 0 0.5px 0 rgba(0, 0, 0, 0.15); //
+    @media (max-width: 992px) {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &:hover .imageWrapper .image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    @media (max-width: 992px) {
+      transform: none;
+    }
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    @media (max-width: 992px) {
+      // width: 220px;
+    }
+
+    .image {
+      // width: 100%;
+      // height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .heartIcon {
+      position: absolute;
+      top: 7px;
+      right: 5px;
+      cursor: pointer;
+      transition: transform 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        transform: scale(1.2);
+        color: red;
+      }
+    }
+  }
+}
+
+.description {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  padding: 10px;
+  padding-top: 12px;
+  // width: fit-content;
+  width: 200px;
+}
+
+.destinationGrid,
+.destinationGridDetails {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  margin-left: 17%;
+  margin-right: 17%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.filterChip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 228px;
+  height: 54px;
+  border-radius: 26px;
+  background: #d9d9d9;
+}
+
+.closeIcon {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 14px;
+  height: 14px;
+}
+
+.closeIcon:hover {
+  opacity: 0.7;
+}
+.closeIcon {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
+.selectedFilters {
+  margin-top: 56px;
+  display: flex;
+  gap: 10px;
+  margin-left: 21%;
+}
+
+@media (max-width: 992px) {
+  .title {
+    margin-left: 0;
+    text-align: center;
+  }
+  .description {
+    font-size: 15px;
+    text-align: center;
+  }
+  .price {
+    text-align: center;
+  }
+  .destinationGrid,
+  .destinationGridDetails {
+    padding: 0;
+    gap: 5px;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .seeMoreTitle {
+    margin-left: 0;
+    text-align: center;
+  }
+  .imageWrapper {
+    justify-content: center;
+
+    display: flex;
+    width: auto;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .region {
+    margin-top: -73px;
+  }
+  .image {
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .heartIcon {
+    display: none;
+  }
+  .card {
+    width: 241px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .selectedFilters {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    flex-direction: column;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .filterChip {
+    font-size: 12px;
+    width: 180px;
+    gap: 10px;
+  }
+}
+@media (max-width: 330px) {
+  .destinationGrid {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .destinationGridDetails {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.destinationGridDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-x: hidden;
+}
+
+.regionRow {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+.regionTitle {
+  flex: 1 1 100%;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #ffc107;
+}
+
+.programsRow {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.card {
+  box-sizing: border-box;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.heartIcon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.perPersonText {
+  font-size: 12px;
+  color: gray;
+}
+.programsGrid {
+  display: flex;
+
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.separator {
+  margin: 20px 0;
+}

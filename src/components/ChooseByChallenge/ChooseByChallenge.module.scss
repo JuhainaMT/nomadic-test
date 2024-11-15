@@ -1,0 +1,134 @@
+.readyToTravelContainer {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.sliderContainer {
+  position: relative;
+  overflow: hidden; // Hide overflow for sliding effect
+  width: 100%;
+  max-width: 1200px; // Adjust based on your container size
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.2s linear; // Faster and smoother sliding effect
+}
+
+.slide {
+  min-width: 33.33%; // Each slide should take up 33.33% of the container for three visible images
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px; // Optional: Add padding for spacing
+}
+
+.image {
+  width: 90%; // Adjust image size
+  height: auto;
+}
+
+.areYouReady {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  padding: 20px 0;
+}
+.slider {
+  display: flex;
+  animation: slideAnimation 10s linear infinite; // Adjust time and speed here
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); // Adjust based on the number of slides
+  }
+}
+@media (max-width: 992px) {
+  .slider {
+    flex-direction: column;
+    animation: none;
+    transform: none;
+    transition: none;
+  }
+}
+.readyToTravelContainer {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.sliderContainer {
+  position: relative;
+  overflow: hidden; // Hide overflow for sliding effect
+  width: 100%;
+  max-width: 1200px; // Adjust based on your container size
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.2s linear; // Faster and smoother sliding effect
+}
+
+.slide {
+  min-width: 33.33%; // Each slide should take up 33.33% of the container for three visible images
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; // Adjust height as needed
+  padding: 10px; // Optional: Add padding for spacing
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.areYouReady {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: normal;
+  padding: 20px 0;
+}
+
+/* Media query for screens less than 992px */
+@media (max-width: 992px) {
+  .slider {
+    flex-direction: column; // Display slides in a column for mobile view
+    transform: none; // Remove animation
+    transition: none; // Disable transition
+  }
+
+  .slide {
+    min-width: 100%; // Take full width for each slide in mobile view
+  }
+
+  .imageWrapper {
+    height: auto; // Adjust height for mobile view
+    padding: 10px; // Maintain padding
+  }
+
+  .image {
+    width: 100%; // Use full width for mobile images
+  }
+
+  .areYouReady {
+    font-size: 20px; // Adjust font size for mobile
+    padding: 10px 0;
+  }
+}

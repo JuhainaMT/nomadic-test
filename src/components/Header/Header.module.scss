@@ -1,0 +1,178 @@
+.topBar {
+  background-color: #ffc108;
+  display: flex;
+  gap: 23px;
+  padding: 33px 20px 19px 293px;
+  padding-left: 17%;
+  font-size: 14px;
+  color: #fff;
+}
+.mobileTopBar {
+  padding: 15px 20px 17px 20px;
+  justify-content: center;
+}
+.navBar {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-family: "Arial", sans-serif;
+  color: #000;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ffce00;
+}
+
+.navigation {
+  display: flex;
+  gap: 59px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #ffce00;
+}
+.headerTelephoneIcon {
+  margin-bottom: -3px;
+  margin-right: 6px;
+}
+.headerWebIcon {
+  margin-bottom: -4px;
+  margin-right: 6px;
+}
+.contactDetails {
+  color: #fff;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 121.392%;
+}
+@media (max-width: 430px) {
+  .topBar {
+    padding-left: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 360px) {
+  .topBar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+// .header {
+//   position: relative; /* Set the header to relative for proper layering */
+//   overflow: hidden; /* Hide overflow to prevent the video from spilling */
+//   padding-bottom: 600px;
+//   margin-bottom: 60px;
+// }
+
+// .backgroundVideo {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 100vw; /* Cover the entire width of the viewport */
+//   height: auto; /* Keep the height auto to maintain aspect ratio */
+//   min-width: 100%;
+//   min-height: 100%;
+//   z-index: -1; /* Ensure the video stays in the background */
+//   transform: translate(-50%, -50%); /* Center the video */
+// }
+
+// .topBar {
+//   position: relative; /* Ensure it's positioned above the video */
+//   z-index: 1; /* Place it above the video */
+// }
+
+// .mobileTopBar {
+//   // Add mobile-specific styles if needed
+// }
+
+// .contactDetails {
+//   position: relative; /* Keep it above the video */
+//   z-index: 2; /* Ensure it's above other elements */
+// }
+
+// /* Additional styles for mobile view */
+// @media (max-width: 992px) {
+//   .backgroundVideo {
+//     width: 100vw; /* Set width to 100vw for mobile view */
+//     height: auto; /* Keep height auto to maintain aspect ratio */
+//     top: 74%;
+//   }
+
+//   .header {
+//     padding-bottom: 90px;
+//     margin-bottom: 20px;
+//   }
+// }
+
+// @media (max-width: 1158px) and (min-width: 1075px) {
+//   .backgroundVideo {
+//     top: 41%;
+//   }
+//   .header {
+//     margin-bottom: 0;
+//   }
+// }
+// @media (max-width: 1075px) and (min-width: 992px) {
+//   .backgroundVideo {
+//     top: 36%;
+//   }
+// }
+.header,
+.homePageHeader {
+  position: relative; /* Position relative for layering */
+  overflow: hidden; /* Hide overflow to prevent spilling */
+  height: 100vh; /* Set header to full height */
+}
+.header {
+  height: 20vh;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw; /* Cover the entire viewport width */
+  height: 100vh; /* Cover the entire viewport height */
+  object-fit: cover; /* Ensure video covers entire area */
+  transform: translate(-50%, -50%); /* Center video */
+  z-index: -1; /* Position video behind content */
+}
+
+/* Contact details styling */
+.contactDetails {
+  position: relative;
+  z-index: 2; /* Above the video */
+}
+
+/* TopBar Styling */
+.topBar {
+  position: relative;
+  z-index: 2; /* Above the video */
+}
+
+/* Responsive styling for mobile view */
+// @media (max-width: 1092px) {
+//   .backgroundVideo {
+//     width: 100vw; /* Set width to 100vw for smaller screens */
+//     height: 200px; /* Maintain aspect ratio */
+//   }
+//   .header {
+//     height: 40vh;
+//   }
+// }
